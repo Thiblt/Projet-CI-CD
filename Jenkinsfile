@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools{
-        maven 'Maven 3.9.8'
+        maven 'Maven 3.8.1'
     }
 
   
@@ -30,9 +30,9 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 script {
-                    def mvnHome = tool 'Maven 3.9.8' //
+                    def mvnHome = tool 'Maven 3.8.1' //
                     withSonarQubeEnv('SonarQ') {
-                        sh "${mvnHome}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=imd-ci-cd -Dsonar.projectName='imd-ci-cd'"
+                        sh "${mvnHome}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=ci-cd -Dsonar.projectName='ci-cd'"
                     }
 
                 }
