@@ -1,7 +1,8 @@
 package fr.diginamic.utils;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.*;
+
+import org.junit.Test;
 
 public class StringUtilsTest {
 

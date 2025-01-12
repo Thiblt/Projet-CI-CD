@@ -1,14 +1,14 @@
 package fr.diginamic.immobilier.entites;
 
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
 
 public class MaisonTest {
     
     private Maison maison;
     
-    @BeforeEach
+    @Before
     public void setUp() {
         maison = new Maison();
     }
