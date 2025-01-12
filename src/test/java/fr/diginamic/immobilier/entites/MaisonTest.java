@@ -57,8 +57,8 @@ public class MaisonTest {
         maison.ajouterPiece(wc);
         maison.ajouterPiece(chambre);
         
-        assertEquals(27, maison.superficieEtage(0));
-        assertEquals(10, maison.superficieEtage(1));
+        assertEquals(27, maison.superficieEtage(0), 0.01);
+        assertEquals(10, maison.superficieEtage(1), 0.01);
     }
     
     
@@ -72,9 +72,9 @@ public class MaisonTest {
             maison.ajouterPiece(wc);
             maison.ajouterPiece(chambre);
         
-        assertEquals(15, maison.superficieTypePiece("Salon"));
-        assertEquals(12, maison.superficieTypePiece("Chambre"));
-        assertEquals(10, maison.superficieTypePiece("WC"));
+        assertEquals(15, maison.superficieTypePiece("Salon"), 0.01);
+        assertEquals(12, maison.superficieTypePiece("Chambre"), 0.01);
+        assertEquals(10, maison.superficieTypePiece("WC"), 0.01);
     }
     
     @Test
@@ -85,6 +85,6 @@ public class MaisonTest {
         maison.ajouterPiece(salon);
         maison.ajouterPiece(wc);
         
-        assertEquals(25.0, maison.calculerSurface());
+        assertEquals(25.0, maison.calculerSurface(), 0.01);
     }
 }
